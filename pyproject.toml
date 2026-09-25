@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mnasolve"
+version = "0.1.0"
+description = "A small SPICE-like circuit simulator using modified nodal analysis: DC operating point, AC sweep and transient analysis."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Guelord Mwenderwa" }]
+dependencies = ["numpy>=1.24"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+mnasolve = "mnasolve.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

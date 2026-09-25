@@ -1,0 +1,8 @@
+Unbalanced Wheatstone bridge (R4 = 1.1k) read by a 100 ohm galvanometer
+V1 top 0 DC 10
+R1 top a 1k
+R2 a 0 1k
+R3 top b 1k
+R4 b 0 1.1k
+Rg a b 100
+.end

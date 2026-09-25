@@ -1,0 +1,6 @@
+Inverting amplifier, gain -10, op-amp modelled as a VCVS with open-loop gain 1e5
+V1 in 0 DC 0.2
+R1 in minus 10k
+R2 minus out 100k
+E1 out 0 0 minus 100k
+.end
