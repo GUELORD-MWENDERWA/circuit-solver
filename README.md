@@ -22,6 +22,16 @@ The project connects two subjects: circuit theory from general electronics (Kirc
 
 ## Installation
 
+Install the latest version directly from GitHub:
+
+```bash
+pip install "git+https://github.com/GUELORD-MWENDERWA/circuit-solver.git"
+```
+
+Or download the wheel from the [latest release](https://github.com/GUELORD-MWENDERWA/circuit-solver/releases/latest) and run `pip install mnasolve-0.1.0-py3-none-any.whl`.
+
+For development:
+
 ```bash
 git clone https://github.com/GUELORD-MWENDERWA/circuit-solver.git
 cd circuit-solver
@@ -81,6 +91,18 @@ c = parse_netlist("V1 in 0 5\nR1 in out 1k\nC1 out 0 1u")
 res = transient(c, t_stop=5e-3, h=1e-6)
 res["time"], res["out"]        # capacitor charging curve, tau = 1 ms
 ```
+
+## Results
+
+The figures below are produced by the library itself. Regenerate them with `pip install matplotlib && python docs/make_figures.py`.
+
+![AC sweep of an RC low-pass and an RLC band-pass](docs/images/bode.png)
+
+*AC sweep of an RC low-pass and an RLC band-pass*
+
+![Transient analysis compared with the analytic solution](docs/images/rc_step.png)
+
+*Transient analysis compared with the analytic solution*
 
 ## How it works
 
